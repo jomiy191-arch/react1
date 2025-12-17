@@ -1,0 +1,150 @@
+.hero {
+  padding: 80px 0;
+  background-color: #0d1117fc; 
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden; /* marquee rasm uchun */
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.hero__item {
+  flex: 1 1 500px;
+}
+
+.hero__link {
+  display: inline-block;
+  font-size: 14px;
+  color: #00e0ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero__link:hover {
+  color: #ff4081;
+}
+
+.hero__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  line-height: 1.2;
+}
+
+.hero__text {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hero__btn {
+  background-color: #3A68B8;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hero__btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero__btn:hover {
+  background-color: #00e0ff;
+}
+
+.hero__list li img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 400px;
+}
+
+/* ----------------- Marquee (scrolling image) ----------------- */
+.hero__marquee {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero__marquee img {
+  height: 50px;
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+/* Keyframes for marquee effect */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 992px) {
+  .hero__container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__btn {
+    margin-bottom: 10px;
+  }
+
+  .hero__marquee img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__text {
+    font-size: 14px;
+  }
+
+  .hero__btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .hero__marquee img {
+    height: 30px;
+  }
+}
