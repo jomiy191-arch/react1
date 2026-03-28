@@ -85,7 +85,6 @@
   flex: 1 1 400px;
 }
 
-/* ----------------- Marquee (scrolling image) ----------------- */
 .hero__marquee {
   position: absolute;
   bottom: 10px;
