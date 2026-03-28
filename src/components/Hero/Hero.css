@@ -71,7 +71,7 @@
 }
 
 .hero__btn a {
-  color: #d82a2a;
+  color: #cc8989;
   text-decoration: none;
 }
 
@@ -84,6 +84,7 @@
   height: auto;
   flex: 1 1 400px;
 }
+
 
 .hero__marquee {
   position: absolute;
